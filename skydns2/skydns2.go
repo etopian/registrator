@@ -66,7 +66,8 @@ func (r *Skydns2Adapter) Refresh(service *bridge.Service) error {
 }
 
 func (r *Skydns2Adapter) servicePath(service *bridge.Service) string {
-	return r.path + "/" + service.Name + "/" + service.ID
+	components := strings.Split(service.ID, ":")
+	return r.path + "/" + service.Name + "/" + components[1] + "-" + components[2]
 }
 
 func domainPath(domain string) string {
