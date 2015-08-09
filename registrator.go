@@ -9,7 +9,7 @@ import (
 	"time"
 
 	dockerapi "github.com/fsouza/go-dockerclient"
-	"github.com/gliderlabs/registrator/bridge"
+	"github.com/etopian/registrator/bridge"
 )
 
 var Version string
